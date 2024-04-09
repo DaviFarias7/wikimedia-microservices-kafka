@@ -2,18 +2,18 @@ package springboot;
 
 import com.launchdarkly.eventsource.EventHandler;
 import com.launchdarkly.eventsource.MessageEvent;
-import org.apache.kafka.common.protocol.types.Field;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
 
 public class WikimediaChangesHandler implements EventHandler {
 
-    private final static Logger LOGGER = LoggerFactory.getLogger(EventHandler.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(WikimediaChangesHandler.class);
+
     private KafkaTemplate<String, String> kafkaTemplate;
     private String topic;
 
-    public WikimediaChangesHandler(KafkaTemplate<String, String> kafkaTemplate, String topíc) {
+    public WikimediaChangesHandler(KafkaTemplate<String, String> kafkaTemplate, String topic) {
         this.kafkaTemplate = kafkaTemplate;
         this.topic = topic;
     }
