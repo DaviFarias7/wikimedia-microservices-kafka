@@ -1,21 +1,19 @@
-# Spring Boot Kafka Microservices
+# Microserviços com Spring Boot e Kafka
 
-This project uses Kafka as a messaging system to exchange messages between two microservices: producer and consumer. The consumer service data is being storaged in a Mysql local database.
-The data is provided by the wikimedia API that returns in real time 
-all wikipedia updates made by users around the world (https://stream.wikimedia.org/v2/stream/recentchange).
+Este projeto utiliza Kafka como um sistema de mensagens para trocar mensagens entre dois microsserviços: produtor e consumidor. Os dados do serviço consumidor estão sendo armazenados em um banco de dados local Mysql. Os dados são fornecidos pela API da wikimedia, que retorna em tempo real todas as atualizações da Wikipedia feitas por usuários ao redor do mundo.
 
-### STEP 1 APACHE KAFKA DOWNLOAD
+### PASSO 1: DOWNLOAD DO APACHE KAFKA
 https://www.apache.org/dyn/closer.cgi?path=/kafka/3.7.0/kafka_2.13-3.7.0.tgz
 
-### STEP 2: START THE KAFKA ENVIRONMENT
-- Start the ZooKeeper service:
+### PASSO 2: INICIAR O AMBIENTE KAFKA
+- Iniciar o serviço ZooKeeper:
 
-Go to the main Kafka folder, type "cmd", and than type this:
+Vá para a pasta principal do Kafka, digite "cmd" e depois digite isto:
 
 ``.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties``
 
-- Start the Kafka broker service:
+-Iniciar o serviço broker do Kafka:
 
-Go to the main Kafka folder, type "cmd", and than type this:
+Vá para a pasta principal do Kafka, digite "cmd" e depois digite isto:
 
 ``.\bin\windows\kafka-server-start.bat .\config\server.properties``
